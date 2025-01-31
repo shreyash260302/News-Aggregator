@@ -9,8 +9,8 @@ const Header = () => {
         <h1 className="text-3xl font-bold">News Aggregator</h1>
         <nav>
           <ul className="flex space-x-4">
-            <li><Link href="/" className="text-blue-600 font-bold">Home</Link></li>
-            <li><Link href="/about" className="text-blue-600 font-bold">About</Link></li>
+            <li><Link href="/" className="text-blue-600 text-white font-bold">Home</Link></li>
+            <li><Link href="/about" className="text-blue-600 text-white font-bold">About</Link></li>
           </ul>
         </nav>
       </div>

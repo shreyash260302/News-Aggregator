@@ -1,4 +1,3 @@
-// app/page.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -6,10 +5,18 @@ import { fetchNews } from "../lib/fetchNews";
 import Header from "../components/Header";
 import NewsCard from "../components/NewsCard";
 
+// Define the structure of an article
+interface Article {
+  title: string;
+  description: string;
+  url: string;
+  urlToImage?: string; // Optional image URL
+}
+
 const categories = ["business", "entertainment", "general", "health", "science", "sports", "technology"];
 
 const Home = () => {
-  const [articles, setArticles] = useState<any[]>([]);
+  const [articles, setArticles] = useState<Article[]>([]); // Using the Article interface
   const [selectedCategory, setSelectedCategory] = useState<string>("business");
 
   useEffect(() => {

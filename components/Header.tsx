@@ -1,5 +1,6 @@
 // components/Header.tsx
 import React from 'react';
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -8,8 +9,8 @@ const Header = () => {
         <h1 className="text-3xl font-bold">News Aggregator</h1>
         <nav>
           <ul className="flex space-x-4">
-            <li><a href="/" className="hover:underline">Home</a></li>
-            <li><a href="/about" className="hover:underline">About</a></li>
+            <li><Link href="/" className="text-blue-600 font-bold">Home</Link></li>
+            <li><Link href="/about" className="text-blue-600 font-bold">About</Link></li>
           </ul>
         </nav>
       </div>

@@ -5,18 +5,18 @@ import { fetchNews } from "../lib/fetchNews";
 import Header from "../components/Header";
 import NewsCard from "../components/NewsCard";
 
-// Define the structure of an article
+
 interface Article {
   title: string;
   description: string;
   url: string;
-  urlToImage?: string; // Optional image URL
+  urlToImage?: string; 
 }
 
 const categories = ["business", "entertainment", "general", "health", "science", "sports", "technology"];
 
 const Home = () => {
-  const [articles, setArticles] = useState<Article[]>([]); // Using the Article interface
+  const [articles, setArticles] = useState<Article[]>([]); 
   const [selectedCategory, setSelectedCategory] = useState<string>("business");
 
   useEffect(() => {
